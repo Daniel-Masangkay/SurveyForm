@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+  <main id="main">
+    <header id="header">
+      <h1 id="title">Survey Form</h1>
+      <p id="description">thank you for taking the time to help us improve</p>
+    </header><br>
+
+    <form id="survey-form" action="index.html" method="post">
+      <label id="name-label" for="name">
+        <p class="labels">Name</p><br>
+        <input id="name" type="text" name="name" placeholder="enter your name" required>
+      </label><br><br>
+
+      <label id="email-label" for="email">
+        <p class="labels">E-mail</p><br>
+        <input id="email" type="email" name="email" placeholder="enter your e-mail" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" required>
+      </label><br><br>
+
+      <label id="number-label" for="number">
+        <p class="labels">Age (optional)</p><br>
+        <input id="number" type="number" name="number" placeholder="enter your age" min="1" max="99">
+      </label><br><br>
+
+      <label for="dropdown">
+        <p class="labels">Which option best describes your career?</p><br>
+        <select id="dropdown" name="dropdown">
+          <option value="web-development">Web Development</option>
+          <option value="web-design">Web Design</option>
+          <option value="other">other</option>
+        </select>
+      </label><br><br>
+
+      <label for="yes-no">
+        <p class="labels">Would you recommend us to your family and friends?</p><br>
+        <input id="yes" type="radio" name="yes-no" value="yes">yes<br>
+        <input id="no" type="radio" name="yes-no" value="no">no
+      </label><br><br>
+
+      <label for="skills">
+        <p class="labels">Which skills would you like to learn?</p><br>
+        <input id="html" type="checkbox" name="skills" value="html">HTML<br>
+        <input id="css" type="checkbox" name="skills" value="css">CSS<br>
+        <input id="javascript" type="checkbox" name="skills" value="javascript">JAVASCRIPT
+      </label><br><br>
+
+      <label for="comments">
+      <textarea id="comments" name="comments" rows="4" cols="50">feel free to leave us any questions, comments, or concerns.</textarea>
+      </label><br><br>
+
+      <input id="submit" value="SUBMIT" type="submit" name="Submit"></input>
+    </form>
+  </main>
+  </body>
+</html>
